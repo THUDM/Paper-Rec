@@ -1,0 +1,11 @@
+Dataset Description
+
+Dataset name: AMiner Paper Click
+
+Node: 5340 users and 14967 items
+
+Edge: 163084 clicks
+
+Description (short): User-Paper interactions on AMiner
+
+Description (long): This dataset collects users' behaviour on AMiner from Aug. 2021 to Nov. 2021. We filtered most sparse records and kept users who at least clicked more than 10 papers. The partition of train/validation/test file has been made and kept the ratio as 8:1:1. For each line in each file, the first number is the user id, and the rest numbers are the paper id which this user clicked.
