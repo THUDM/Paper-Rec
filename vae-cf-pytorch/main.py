@@ -46,7 +46,7 @@ if torch.cuda.is_available():
         print("WARNING: You have a CUDA device, so you should probably run with --cuda")
 
 device = torch.device("cuda" if args.cuda else "cpu")
-torch.cuda.set_device(args.gpu_id)
+# torch.cuda.set_device(args.gpu_id)
 topk = [20,5,10,50]
 ###############################################################################
 # Load data
