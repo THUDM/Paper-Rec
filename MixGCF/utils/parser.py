@@ -50,9 +50,9 @@ def parse_args():
     parser.add_argument("--context_hops", type=int, default=3, help="hop")
 
     # ===== save model ===== #
-    parser.add_argument("--save", type=bool, default=False, help="save model or not")
+    parser.add_argument("--save", type=bool, default=True, help="save model or not")
     parser.add_argument(
-        "--out_dir", type=str, default="./weights/gowalla/", help="output directory for model"
+        "--out_dir", type=str, default="./weights/aminer/", help="output directory for model"
     )
 
     return parser.parse_args()

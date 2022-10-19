@@ -7,7 +7,7 @@ Xiangnan He et al. LightGCN: Simplifying and Powering Graph Convolution Network 
 '''
 
 import os
-from os.path import join
+from os.path import join, abspath, dirname
 import torch
 from enum import Enum
 from parse import parse_args
@@ -16,7 +16,8 @@ import multiprocessing
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 args = parse_args()
 
-ROOT_PATH = "/home/keg/cog/CogGCN/GF_CF-main"
+# ROOT_PATH = "/home/keg/cog/CogGCN/GF_CF-main"
+ROOT_PATH = join(abspath(dirname(__file__)), "..")
 CODE_PATH = join(ROOT_PATH, 'code')
 DATA_PATH = join(ROOT_PATH, 'data')
 BOARD_PATH = join(CODE_PATH, 'runs')
@@ -48,7 +49,8 @@ config['A_split'] = False
 config['bigdata'] = False
 
 GPU = torch.cuda.is_available()
-device = torch.device('cuda:{}'.format(args.gpu_id) if GPU else "cpu")
+# device = torch.device('cuda:{}'.format(args.gpu_id) if GPU else "cpu")
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 CORES = multiprocessing.cpu_count() // 2
 seed = args.seed
 

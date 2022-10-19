@@ -95,6 +95,7 @@ if __name__ == '__main__':
     stopping_step = 0
     should_stop = False
     best_epoch = 0
+    best_test_metrics = None
     print("start training ...")
     for epoch in range(args.epoch):
         # shuffle training data
@@ -158,10 +159,13 @@ if __name__ == '__main__':
 
             """save weight"""
             if valid_ret['recall'][2] == cur_best_pre_0 and args.save:
+                os.makedirs(args.out_dir, exist_ok=True)
                 torch.save(model.state_dict(), args.out_dir + 'model_' + '.ckpt')
                 best_epoch = epoch
+                best_test_metrics = test_ret
         else:
             # logging.info('training loss at epoch %d: %f' % (epoch, loss.item()))
             print('using time %.4fs, training loss at epoch %d: %.4f' % (train_e_t - train_s_t, epoch, loss.item()))
 
     print('early stopping at %d, recall@20:%.4f, best_epoch at %d' % (epoch, cur_best_pre_0, best_epoch))
+    print("best test metrics: ", best_test_metrics)
