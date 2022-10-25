@@ -2,6 +2,7 @@
 
 # Environment
 - Python 3.7
+- torch 1.10.0+cu111
 - ```pip install -r requirements.txt``` (Note: sparsesvd can be installed from source)
 
 
