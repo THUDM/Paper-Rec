@@ -20,7 +20,7 @@ python main.py --cuda --gpu_id 0 --data aminer --batch_size 2048
 We apply the GF-CF model implemented by [yshenaw's version](https://github.com/yshenaw/GF_CF).
 
 ```shell
-cd ./GF_CF-main/Table3&4/
+cd GF_CF-main/Table3\&4
 python3 main.py --dataset="aminer" --topks="[20,5,10,50]" --simple_model "gf-cf" --gpu_id 0
 ```
 
