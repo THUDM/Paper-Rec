@@ -1,4 +1,10 @@
 # Byte-compiled / optimized / DLL files
+
+MixGCF/weights/
+vae-cf-pytorch/model.pt
+vae-cf-pytorch/runs/
+vae-cf-pytorch/wandb/
+
 __pycache__/
 *.py[cod]
 *$py.class
