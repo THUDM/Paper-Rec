@@ -4,6 +4,7 @@ MixGCF/weights/
 vae-cf-pytorch/model.pt
 vae-cf-pytorch/runs/
 vae-cf-pytorch/wandb/
+GF_CF-main/Table3\&4/sources/sampling.cpython-*    
 
 __pycache__/
 *.py[cod]
