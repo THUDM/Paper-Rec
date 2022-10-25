@@ -3,9 +3,10 @@ cppimport==22.8.2
 numpy==1.16.4
 pandas==0.24.2
 prettytable==3.4.1
-scikit_learn==1.1.2
+scikit_learn==0.23.2
 scipy==1.3.0
 sparsesvd==0.2.2
 tensorboardX==2.5.1
 torch==1.4.0
 tqdm==4.64.1
+wandb==0.13.4
